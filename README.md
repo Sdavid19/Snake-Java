@@ -17,7 +17,7 @@ Egyszerű Snake játék Java nyelven, Swing grafikus felülettel megvalósítva.
 - Java
 - Swing
 - MySQL
-- Docker Compose
+- Docker
 - IntelliJ IDEA
 
 ## Projekt struktúra
@@ -28,7 +28,6 @@ snake-game/
 │   └── compose.yaml
 ├── src/
 │   └── ...
-├── pom.xml / build.gradle
 └── README.md
 ```
 
