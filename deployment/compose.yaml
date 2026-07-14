@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:9.1
+    container_name: highscore-mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: progtech
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./highscores_db.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pprogtech"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
